@@ -1,0 +1,31 @@
+<section class="content-header">
+   <h5>Posts/All Posts</h5>
+</section>
+
+<section class="content">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="box">
+            <div class="box-header with-border ui-sortable-handle">
+               <h3 class="box-title">All Posts</h3>
+            </div>
+            
+            <div class="box-body">
+
+               <div class="card col-md-4" *ngFor="let data of PostData" style="float: left">
+                  <span><i style="color:gray;font-size:20px;margin-right:10px" class="fa fa-user"></i><b
+                        style="margin-right:20px">{{data.userName}}</b><small>{{data.Date}}</small></span>
+                  <div class="img-thumbnail" ><img src="assets/images/foodImage.jpg" alt="img not found"></div>
+                  <p style="margin-bottom: 0px;"><span><i class="fas fa-heart reviewFood"></i></span><span><i
+                           class="fas fa-paper-plane reviewFood"></i></span><span><i
+                           class="fas fa-bookmark reviewFood"></i></span></p>
+                  <p style="margin-bottom: 0px;font-size:16px;color:black"><b>{{data.DishName}}</b></p>
+                  <p style="margin-bottom: 0px;font-size:14px;font-weight:600px;color:black">Restaurent Area</p>
+                  <p style="margin-bottom: 0px;font-size:14px;">{{data.restaurentArea}}</p>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
