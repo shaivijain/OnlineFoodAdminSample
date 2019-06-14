@@ -1,67 +1,61 @@
 <div class="wrapper">
-    <div class="col-md-12" style="padding:0px;">      
-       <nav class="navbar" role="navigation" style="background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);">  
-        <div class="col-md-6 pull-left">
-            <a class="navbar-brand" style="color:white;margin-right: 34px;" href="#">Sample  Admin</a>
-            <span id="sidebarCollapse" style="color:white">
-                    <i class="fas fa-bars"></i>
-            </span>
-        </div>
-        <div class="col-md-6 pull-right" style="text-align:right">
-            <a  title="Logout"><i style="color:white" class="fa fa-power-off" aria-hidden="true"></i></a>
-        </div>
-       </nav>
-    </div>
-<div>
-    <!-- <div class="col-md-12" style="padding:0px;"> -->
-        
-        <div class="col-2" style="padding:0px;float: left;">
-        <div id="sidebar" style="height: -webkit-fill-available">               
-            <ul class="list-unstyled components">
-                <li [routerLinkActive]="['active']">
-                        <a href="#" [routerLink]="['/Dashboard']">Dashboard</a>
-                </li>
-                <li [routerLinkActive]="['active']">
-                    <a href="#ManagementSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Management</a>
-                    <ul class="collapse list-unstyled" id="ManagementSubmenu">
-                            <li [routerLinkActive]="['active']">
-                                    <a [routerLink]="['/Management']">Page 1 Management</a>
-                            </li>
-                            <li [routerLinkActive]="['active']">
-                                <a [routerLink]="['/Management2']">Page 2 Management</a>
-                            </li>  
+        <div class="col-md-12" style="padding:0px;">      
+                <nav class="navbar" role="navigation" style="background: linear-gradient(90deg, #4c4ca2 0%, #872e96 40%, #872e96 45%, #c90d8b 100%);">  
+                 <div class="col-md-6 pull-left">
+                     <a class="navbar-brand" style="color:white;margin-right: 34px;" href="#">Sample  Admin</a>
+                     <span id="sidebarCollapse" style="color:white">
+                             <i class="fas fa-bars"></i>
+                     </span>
+                 </div>
+                 <div class="col-md-6 pull-right" style="text-align:right">
+                     <a  title="Logout"><i style="color:white" class="fa fa-power-off" aria-hidden="true"></i></a>
+                 </div>
+                </nav>
+             </div>
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebarActive" style="float: left; width:20%;">
+    
+                <ul class="list-unstyled components">
+                        <li [routerLinkActive]="['active']">
+                                <a href="#" [routerLink]="['/Dashboard']">Dashboard</a>
+                        </li>
+                        <li [routerLinkActive]="['active']">
+                            <a href="#ManagementSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Management</a>
+                            <ul class="collapse list-unstyled" id="ManagementSubmenu">
+                                    <li [routerLinkActive]="['active']">
+                                            <a [routerLink]="['/Management']">Page 1 Management</a>
+                                    </li>
+                                    <li [routerLinkActive]="['active']">
+                                        <a [routerLink]="['/Management2']">Page 2 Management</a>
+                                    </li>  
+                            </ul>
+                        </li>
+                        
+                        <li [routerLinkActive]="['active']">
+                            <a href="#BusinessSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" [routerLink]="['/Business']">Business</a>
+                            <ul class="collapse list-unstyled" id="BusinessSubmenu">
+                                    <li [routerLinkActive]="['active']">
+                                            <a [routerLink]="['/page1B']">Page 1 Business</a>
+                                    </li>
+                                    <li [routerLinkActive]="['active']">
+                                        <a [routerLink]="['/page2B']">Page 2 Business</a>
+                                    </li>  
+                            </ul>
+                        </li>
+                        <li [routerLinkActive]="['active']" class="active">
+                            <a href="#" [routerLink]="['/post']">Posts</a>
+                        </li>
                     </ul>
-                </li>
-                
-                <li [routerLinkActive]="['active']">
-                    <a href="#BusinessSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" [routerLink]="['/Business']">Business</a>
-                    <ul class="collapse list-unstyled" id="BusinessSubmenu">
-                            <li [routerLinkActive]="['active']">
-                                    <a [routerLink]="['/page1B']">Page 1 Business</a>
-                            </li>
-                            <li [routerLinkActive]="['active']">
-                                <a [routerLink]="['/page2B']">Page 2 Business</a>
-                            </li>  
-                    </ul>
-                </li>
-                <li [routerLinkActive]="['active']" class="active">
-                    <a href="#" [routerLink]="['/post']">Posts</a>
-                </li>
-            </ul>
-        </div>         
-        </div>   
-     <div class="col-10" style="float: right">
-        <nav style="background-color: #e0dfdf">
-            <div class="content-wrapper">             
-                <router-outlet></router-outlet>   
-            </div>
         </nav>
-    <!-- </div> -->
+    
+        <!-- Page Content -->
+        <div id="content" style="float: right;width: 80%;">
+                <nav style="background-color: #e0dfdf">
+                        <div class="content-wrapper">             
+                            <router-outlet></router-outlet>   
+                        </div>
+                    </nav>
+        </div>
+        <!-- Dark Overlay element -->
+        <!-- <div class="overlay"></div> -->
     </div>
-</div>
-   
-    <!-- <footer class="main-footer">
-       <span>&copy; EB Machine Test-Shaivi</span>   
-    </footer> -->
- </div>
- 

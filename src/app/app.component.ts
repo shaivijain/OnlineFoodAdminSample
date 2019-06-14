@@ -13,6 +13,15 @@ export class AppComponent implements OnInit {
     $(document).ready(function(){
       $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
+        if($('#sidebar').hasClass('sidebarActive')){
+          $('#sidebar').width('0%');
+          $('#content').width('100%');
+          $('#sidebar').removeClass('sidebarActive');
+        }else{
+          $('#sidebar').addClass('sidebarActive');
+          $('#sidebar').width('20%');
+          $('#content').width('80%');
+        }
     });
     });
   }

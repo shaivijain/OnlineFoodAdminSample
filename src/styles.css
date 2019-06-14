@@ -27,6 +27,11 @@ a, a:hover, a:focus {
     color: #fff;
     transition: all 0.3s;
     box-shadow: 0 0 10px #757575;
+    width: 250px;
+    position: relative;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
 }
 
 #sidebar ul.components {
@@ -186,3 +191,4 @@ a[data-toggle="collapse"] {
       padding: 0;
     }
   }
+
